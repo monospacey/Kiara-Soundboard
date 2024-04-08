@@ -17,6 +17,10 @@ jobs:
         npm run build
 
     - name: push to gh-pages
+      permissions:
+        contents: write
+        pages: write
+
       run: |
         ls
         git config --global user.name "GitHub Actions"
