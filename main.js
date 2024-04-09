@@ -30,6 +30,6 @@ setupCounter(document.querySelector('#counter'));
 let eggButton = document.getElementById("egg");
 
 eggButton.addEventListener("click", () => {
-  playAudio("/egg-oo.mp3")
+  playAudio("./public/egg-oo.mp3")
 }
 );
