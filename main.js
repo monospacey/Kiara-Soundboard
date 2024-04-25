@@ -1,35 +1,43 @@
 import "./style.css";
-import javascriptLogo from "./javascript.svg";
-import viteLogo from "/vite.svg";
-import eggOoAudio from "/egg-oo.mp3";
-import { setupCounter } from "./counter.js";
+import quaverLogo from "/kiara_quaver.svg";
+import eggAudio from "/egg-oo.mp3";
+import laughAudio from "/laugh.mp3";
+import hiccupAudio from "/hiccup.mp3";
+import fussyAudio from "/fussy.mp3";
 import { playAudio } from "./playAudio.js";
 
 document.querySelector("#app").innerHTML = `
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
+      <img src="${quaverLogo}" class="logo" alt="Kuaver1" />
+    <h1>Kiara's Soundboard</h1>
+    </div>
     <div class="card">
       <button id="egg" type="button">Egg-oo</button>
+      <button id="laugh" type="button">Laugh</button>
     </div>
     <div class="card">
-      <button id="counter" type="button"></button>
+      <button id="hiccup" type="button">Hiccup</button>
+      <button id="fussy" type="button">Fussy</button>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
 `;
 
-setupCounter(document.querySelector("#counter"));
 
 let eggButton = document.getElementById("egg");
-
 eggButton.addEventListener("click", () => {
-  playAudio(eggOoAudio);
+  playAudio(eggAudio);
+});
+
+let laughButton = document.getElementById("laugh");
+laughButton.addEventListener("click", () => {
+  playAudio(laughAudio);
+});
+
+let hiccupButton = document.getElementById("hiccup");
+hiccupButton.addEventListener("click", () => {
+  playAudio(hiccupAudio);
+});
+
+let fussyButton = document.getElementById("fussy");
+fussyButton.addEventListener("click", () => {
+  playAudio(fussyAudio);
 });
