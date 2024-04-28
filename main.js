@@ -4,6 +4,7 @@ import eggAudio from "/egg-oo.mp3";
 import laughAudio from "/laugh.mp3";
 import hiccupAudio from "/hiccup.mp3";
 import fussyAudio from "/fussy.mp3";
+import sneezeAudio from "/sneeze.mp3";
 import { playAudio } from "./playAudio.js";
 
 document.querySelector("#app").innerHTML = `
@@ -18,6 +19,7 @@ document.querySelector("#app").innerHTML = `
     <div class="card">
       <button id="hiccup" type="button">Hiccup</button>
       <button id="fussy" type="button">Fussy</button>
+      <button id="sneeze" type="button">Sneeze</button>
     </div>
 `;
 
@@ -40,4 +42,9 @@ hiccupButton.addEventListener("click", () => {
 let fussyButton = document.getElementById("fussy");
 fussyButton.addEventListener("click", () => {
   playAudio(fussyAudio);
+});
+
+let sneezeButton = document.getElementById("sneeze");
+sneezeButton.addEventListener("click", () => {
+  playAudio(sneezeAudio);
 });
