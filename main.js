@@ -5,6 +5,7 @@ import laughAudio from "/laugh.mp3";
 import hiccupAudio from "/hiccup.mp3";
 import fussyAudio from "/fussy.mp3";
 import sneezeAudio from "/sneeze.mp3";
+import settlingAudio from "/settling.mp3";
 import { playAudio } from "./playAudio.js";
 
 document.querySelector("#app").innerHTML = `
@@ -15,6 +16,7 @@ document.querySelector("#app").innerHTML = `
     <div class="card">
       <button id="egg" type="button">Egg-oo</button>
       <button id="laugh" type="button">Laugh</button>
+      <button id="settling" type="button">Settling</button>
     </div>
     <div class="card">
       <button id="hiccup" type="button">Hiccup</button>
@@ -47,4 +49,9 @@ fussyButton.addEventListener("click", () => {
 let sneezeButton = document.getElementById("sneeze");
 sneezeButton.addEventListener("click", () => {
   playAudio(sneezeAudio);
+});
+
+let settlingButton = document.getElementById("settling");
+settlingButton.addEventListener("click", () => {
+  playAudio(settlingAudio);
 });
